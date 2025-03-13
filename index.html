@@ -13,9 +13,9 @@
   </head>
   <body>
     <!-- header -->
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar bg-base-100 shadow-sm w-11/12 mx-auto mt-3">
       <div class="flex-1">
-        <a class="btn btn-ghost text-xl">daisyUI</a>
+        <a class="btn btn-ghost text-xl">Pet Zone</a>
       </div>
       <div class="flex-none">
         <div class="dropdown dropdown-end">
@@ -89,9 +89,20 @@
       ></section>
 
       <!-- Pets container section -->
+       <section id="spinner" class="center w-11/12 mx-auto py-5 text-center">
+        <span class="loading loading-spinner text-primary"></span>
+        <span class="loading loading-spinner text-secondary"></span>
+        <span class="loading loading-spinner text-accent"></span>
+        <span class="loading loading-spinner text-neutral"></span>
+        <span class="loading loading-spinner text-info"></span>
+        <span class="loading loading-spinner text-success"></span>
+        <span class="loading loading-spinner text-warning"></span>
+        <span class="loading loading-spinner text-error"></span>
+       </section>
         <section id="petContainer" class="grid grid-cols-3 gap-2 justify-center items-center w-11/12 mx-auto py-5">
 
         </section>
+
         <!-- for empty pets -->
          <section id="emptypets" class="w-11/12 mx-auto text-center mt-10">
             <h1 class="font-bold text-3xl text-red-500">Sorry No Pets Found !!!!!</h1>

@@ -1,5 +1,7 @@
 const emptyPets=document.getElementById('emptypets');
+const spinner=document.getElementById('spinner');
 emptyPets.style.display="none";
+spinner.style.display="none";
 // load category
 const loadCategory = async () => {
   const response = await fetch(
@@ -10,11 +12,17 @@ const loadCategory = async () => {
 };
 // Load pets
 const loadPets = async (cantegoryName) => {
+    spinner.style.display="block";
   const response = await fetch(
     `https://openapi.programming-hero.com/api/peddy/category/${cantegoryName}`
   );
   const data = await response.json();
-  displayPets(data.data);
+  if(data.data)
+  {
+    spinner.style.display="none";
+    displayPets(data.data);
+  }
+  
 };
 
 // Display Pets
