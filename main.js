@@ -1,3 +1,5 @@
+const emptyPets=document.getElementById('emptypets');
+emptyPets.style.display="none";
 // load category
 const loadCategory = async () => {
   const response = await fetch(
@@ -18,6 +20,12 @@ const loadPets = async (cantegoryName) => {
 // Display Pets
 const displayPets=(pets)=>{
     const petContainer=document.getElementById('petContainer');
+    if(pets.length<1){
+        petContainer.style.display="none";
+        emptyPets.style.display="block";
+    }
+
+    
     petContainer.innerHTML="";
    pets.forEach((pet)=>{
     console.log(pet);
