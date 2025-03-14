@@ -36,7 +36,7 @@ const displayPets=(pets)=>{
     
     petContainer.innerHTML="";
    pets.forEach((pet)=>{
-    console.log(pet);
+    // console.log(pet);
     const div=document.createElement('div');
     div.classList.add('mt-5');
     div.innerHTML=`
@@ -54,17 +54,25 @@ const displayPets=(pets)=>{
     <p class="text-2xl font-bold">Price: ${pet.price
     }</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn selected btn-primary">Buy Now</button>
     </div>
   </div>
 </div>
     
     `;
     petContainer.append(div);
+
+
    })
 }
 
-
+// get element by id
+function getElementById(id)
+{
+    const element=document.getElementById('count').innerText;
+    const convertedvalue=parseInt(element);
+    return convertedvalue;
+}
 // display categorires
 const displayCategory = (categories) => {
   const categoriesContainer = document.getElementById("category_container");
